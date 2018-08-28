@@ -1,0 +1,41 @@
+<div class="container">
+
+  <div class="alert alert-danger col-10" *ngIf="userExist">
+    A User is already Exist with this email
+  </div>
+  <div class="alert alert-success col-10" *ngIf="isCreated">
+    You succesfully created an account
+  </div>
+
+  <form (ngSubmit)="createUser()">
+      <div class="form group">
+          <label for="name">Email</label>
+          <input type="email" name="email" class="form-control" [(ngModel)]="user.email">
+      </div>
+      <div class="col-10" *ngIf="userError?.email">
+        <span class="text text-danger">{{ userError.email }}</span>
+      </div>
+      <div class="form group">
+          <label for="name">Password:</label>
+          <input type="password" name="password" class="form-control" [(ngModel)]="user.password">
+      </div>
+      <div class="col-10" *ngIf="userError?.password">
+        <span class="text text-danger">{{ userError.password }}</span>
+      </div>
+      <div class="form group">
+          <label for="desc">Name:</label>
+          <input type="text" name="name" class="form-control" [(ngModel)]="user.name">
+      </div>
+      <div class="col-10" *ngIf="userError?.name">
+        <span class="text text-danger">{{ userError.name }}</span>
+      </div>
+      <div class="form group">
+        <label for="desc">Phone Number:</label>
+        <input type="text" name="name" class="form-control" [(ngModel)]="user.phone_num">
+    </div>
+    <div class="col-10" *ngIf="userError?.phone_num">
+      <span class="text text-danger">{{ userError.phone_num }}</span>
+    </div>
+      <input type="submit" value="Register"style="position: relative; top: 20px;" class="btn btn-success">
+  </form>
+</div>
