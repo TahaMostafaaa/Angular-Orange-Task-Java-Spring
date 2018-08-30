@@ -15,7 +15,7 @@ Bonus<br/>
 ## Instructions to run backend
 1- Just extract the BACKEND folder to STS(Spring Tool Suite) and run it as (Java Application) on port=8080.<br/>
 2- For database you can excute the sql file in your Sql Editor (it contain database creation statement) OR
-   Just create the database(name=store) maunally and run the application and it will create the Tables with it objects.<br/>
+   Just create the database(name=store,username=root,pass=12345) maunally and run the application and it will create the Tables with it objects.<br/>
 3- Then you can test iy using Postman.<br/>
 <br/>
 == Categories ==<br/>
